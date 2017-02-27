@@ -15,7 +15,7 @@ public class Employee {
     private boolean fullTime;
 
     // Create Employee with no details
-    public Employee() {
+    Employee() {
         this.employeeId = 0;
         this.pps = "";
         this.surname = "";
@@ -45,7 +45,7 @@ public class Employee {
     }
 
     // Setter methods
-    public void setEmployeeId(int employeeId) {
+    void setEmployeeId(int employeeId) {
         this.employeeId = employeeId;
     }
 
@@ -53,7 +53,7 @@ public class Employee {
         return pps;
     }
 
-    public void setPps(String pps) {
+    void setPps(String pps) {
         this.pps = pps;
     }
 
@@ -61,7 +61,7 @@ public class Employee {
         return this.surname;
     }
 
-    public void setSurname(String surname) {
+    void setSurname(String surname) {
         this.surname = surname;
     }
 
@@ -69,7 +69,7 @@ public class Employee {
         return this.firstName;
     }
 
-    public void setFirstName(String firstName) {
+    void setFirstName(String firstName) {
         this.firstName = firstName;
     }
 
@@ -77,7 +77,7 @@ public class Employee {
         return this.gender;
     }
 
-    public void setGender(char gender) {
+    void setGender(char gender) {
         this.gender = gender;
     }
 
@@ -85,7 +85,7 @@ public class Employee {
         return this.department;
     }
 
-    public void setDepartment(String department) {
+    void setDepartment(String department) {
         this.department = department;
     }
 
@@ -93,7 +93,7 @@ public class Employee {
         return this.salary;
     }
 
-    public void setSalary(double salary) {
+    void setSalary(double salary) {
         this.salary = salary;
     }
 
@@ -101,13 +101,13 @@ public class Employee {
         return this.fullTime;
     }
 
-    public void setFullTime(boolean fullTime) {
+    void setFullTime(boolean fullTime) {
         this.fullTime = fullTime;
     }
 
     // Display Employee details
     public String toString() {
-        String bool = "";
+        String bool;
         if (fullTime)
             bool = "Yes";
         else

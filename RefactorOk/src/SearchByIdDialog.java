@@ -10,10 +10,11 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class SearchByIdDialog extends JDialog implements ActionListener {
-    EmployeeDetails parent;
-    JButton search, cancel;
-    JTextField searchField;
+class SearchByIdDialog extends JDialog implements ActionListener {
+    private final EmployeeDetails parent;
+    private JButton search;
+    private JButton cancel;
+    private JTextField searchField;
 
     // constructor for SearchByIdDialog
     public SearchByIdDialog(EmployeeDetails parent) {
@@ -33,7 +34,7 @@ public class SearchByIdDialog extends JDialog implements ActionListener {
     }// end SearchByIdDialog
 
     // initialize search container
-    public Container searchPane() {
+    private Container searchPane() {
         JPanel searchPanel = new JPanel(new GridLayout(3, 1));
         JPanel textPanel = new JPanel();
         JPanel buttonPanel = new JPanel();
@@ -67,7 +68,7 @@ public class SearchByIdDialog extends JDialog implements ActionListener {
         if (e.getSource() == search) {
             // try get correct valus from text field
             try {
-                Double.parseDouble(searchField.getText());
+
                 this.parent.searchByIdField.setText(searchField.getText());
                 // search Employee by ID
                 this.parent.searchEmployeeById();

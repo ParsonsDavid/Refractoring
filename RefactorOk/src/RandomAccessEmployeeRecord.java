@@ -7,7 +7,7 @@
 import java.io.IOException;
 import java.io.RandomAccessFile;
 
-public class RandomAccessEmployeeRecord extends Employee {
+class RandomAccessEmployeeRecord extends Employee {
     public static final int SIZE = 175; // Size of each RandomAccessEmployeeRecord object
 
     // Create empty record
@@ -60,7 +60,7 @@ public class RandomAccessEmployeeRecord extends Employee {
     // Ensure that string is correct length
     private void writeName(RandomAccessFile file, String name)
             throws IOException {
-        StringBuffer buffer = null;
+        StringBuffer buffer;
 
         if (name != null)
             buffer = new StringBuffer(name);
